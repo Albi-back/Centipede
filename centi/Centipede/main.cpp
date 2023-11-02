@@ -51,10 +51,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 				   PSTR cmdLine, int showCmd)
 {
 
-	int w(512), h(256);
+	int w(512), h(1024);
 	//int defaults[] = { 640,480, 800,600, 1024,768, 1280,1024 };
 		//WinUtil::ChooseRes(w, h, defaults, 4);
-	if (!WinUtil::Get().InitMainWindow(w, h, hInstance, "Fezzy", MainWndProc, true))
+	if (!WinUtil::Get().InitMainWindow(w, h, hInstance, "Centipede", MainWndProc, true))
 		assert(false);
 
 	MyD3D d3d;
