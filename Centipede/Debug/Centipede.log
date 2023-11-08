@@ -1,0 +1,7 @@
+﻿  Game.cpp
+  Sprite.cpp
+C:\Users\Albi\Desktop\OOC++P_All_StarterCode\Tutorials\centi\Centipede\Sprite.cpp(41,16): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\Albi\Desktop\OOC++P_All_StarterCode\Tutorials\centi\Centipede\Sprite.cpp(42,17): warning C4553: '==': result of expression not used; did you intend '='?
+  main.cpp
+  Generating Code...
+  Centipede.vcxproj -> C:\Users\Albi\Desktop\OOC++P_All_StarterCode\Tutorials\centi\bin\Centipede.exe
