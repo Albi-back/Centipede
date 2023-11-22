@@ -1,7 +1,12 @@
-﻿  Game.cpp
-  Sprite.cpp
-C:\Users\Albi\Desktop\OOC++P_All_StarterCode\Tutorials\centi\Centipede\Sprite.cpp(41,16): warning C4553: '==': result of expression not used; did you intend '='?
-C:\Users\Albi\Desktop\OOC++P_All_StarterCode\Tutorials\centi\Centipede\Sprite.cpp(42,17): warning C4553: '==': result of expression not used; did you intend '='?
+﻿  D3D.cpp
+  D3DUtil.cpp
+  Game.cpp
   main.cpp
+  Sprite.cpp
+C:\Users\Albi\Desktop\Uni work\OOC++P_All_StarterCode\Tutorials\Centipede\Centipede\Sprite.cpp(41,16): warning C4553: '==': result of expression not used; did you intend '='?
+C:\Users\Albi\Desktop\Uni work\OOC++P_All_StarterCode\Tutorials\Centipede\Centipede\Sprite.cpp(42,17): warning C4553: '==': result of expression not used; did you intend '='?
+  TexCache.cpp
+  WindowUtils.cpp
   Generating Code...
-  Centipede.vcxproj -> C:\Users\Albi\Desktop\OOC++P_All_StarterCode\Tutorials\centi\bin\Centipede.exe
+  LINK : ..\bin\Centipede.exe not found or not built by the last incremental link; performing full link
+  Centipede.vcxproj -> C:\Users\Albi\Desktop\Uni work\OOC++P_All_StarterCode\Tutorials\Centipede\bin\Centipede.exe
