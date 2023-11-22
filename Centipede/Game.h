@@ -22,7 +22,7 @@ private:
 	std::vector<Sprite> mBgnd; //paralax layers
 	
 	void InitBgnd();
-	//void InitPlayer();
+	void InitPlayer();
 	void Render1(float dTime, DirectX::SpriteBatch& batch);
 };
 

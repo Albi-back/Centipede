@@ -11,6 +11,7 @@ using namespace DirectX::SimpleMath;
 Game::Game(MyD3D& d3d)
 	: mPMode(d3d), mD3D(d3d), mpSB(nullptr)
 {
+
 	mpSB = new SpriteBatch(&mD3D.GetDeviceCtx());
 }
 
@@ -58,7 +59,7 @@ PlayMode::PlayMode(MyD3D & d3d)
 	:mD3D(d3d),mPlayer(d3d)
 {
 	InitBgnd();
-	//InitPlayer();
+	InitPlayer();
 }
 
 void PlayMode::Update(float dTime)
@@ -73,6 +74,8 @@ void PlayMode::Render(float dTime, DirectX::SpriteBatch & batch)
 	
 	for (auto& s : mBgnd)
 		s.Draw(batch);
+	mPlayer.Draw(batch);
+}
 	
 	
 	//Sprite spr(mD3D);
@@ -100,7 +103,7 @@ void PlayMode::Render(float dTime, DirectX::SpriteBatch & batch)
 	//spr2.mPos=Vector2(224, 756);
 	//
 	//spr2.Draw(batch);
-}
+
 void PlayMode::InitBgnd()
 {
 	//a sprite for each layer
@@ -128,6 +131,22 @@ void PlayMode::InitBgnd()
 	}
 
 
+}
+void PlayMode::InitPlayer()
+{
+	ID3D11ShaderResourceView* p = mD3D.GetCache().LoadTexture(&mD3D.GetDevice(), "spaceship.dds");
+	mPlayer.SetTex(*p);
+	mPlayer.SetScale(Vector2(3.f, 3.f));
+	
+	mPlayer.origin = mPlayer.GetTexData().dim / 2.f;
+	//mPlayer.rotation = PI / 2.f;
+	int w, h;
+	WinUtil::Get().GetClientExtents(w, h);
+	mPlayArea.left = mPlayer.GetScreenSize().x * 0.6f;
+	mPlayArea.top = mPlayer.GetScreenSize().y * 0.6f;
+	mPlayArea.right = w - mPlayArea.left;
+	mPlayArea.bottom = h * 0.75f;
+	mPlayer.mPos = Vector2(mPlayArea.left + mPlayer.GetScreenSize().x * 2.f, (mPlayArea.bottom - mPlayArea.top)*1.3f);
 }
 
 
